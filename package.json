@@ -1,0 +1,11 @@
+{
+	"name": "wetube",
+	"version": "1.0.0",
+	"description": "cloing Youtube with Vanilla and NodeJS",
+	"main": "index.js",
+	"author": "tonky0110",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.16.4"
+	}
+}
