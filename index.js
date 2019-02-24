@@ -1,4 +1,8 @@
 import express from 'express';
+import logger from 'morgan';
+import helmet from 'helmet';
+import cookieParser from 'cookie-parser';
+import bodyParser from 'body-parser';
 
 const app = express();
 
@@ -11,12 +15,12 @@ const handleHome = (req, res) => res.send('Hello from home!');
 
 const handleProfile = (req, res) => res.send('You are on my profile');
 
-const betweenHome = (req, res, next) => {
-	console.log('Between');
-	next();
-};
-
-app.use(betweenHome);
+// Middleware
+app.use(cookieParser());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(helmet()); // 보안
+app.use(logger('dev')); // 로깅 tiny, combined, common, dev
 
 app.get('/', handleHome);
 
