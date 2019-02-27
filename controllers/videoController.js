@@ -4,7 +4,7 @@ export const home = (req, res) => res.render('home', { pageTitle: 'Home', videos
 
 export const search = (req, res) => {
 	const { query: { term: searchingBy } = {} } = req;
-	res.render('Search', { pageTitle: 'Search', searchingBy });
+	res.render('Search', { pageTitle: 'Search', searchingBy, videos });
 };
 
 export const upload = (req, res) => res.render('Upload', { pageTitle: 'Upload' });
