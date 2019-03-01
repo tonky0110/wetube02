@@ -14,6 +14,7 @@ const app = express();
 // Middleware
 app.use(helmet()); // 보안
 app.set('view engine', 'pug');
+app.use('/uploads', express.static('uploads'));
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
