@@ -32,7 +32,13 @@ const routes = {
 			return USER_DETAIL;
 		}
 	},
-	editProfile: EDIT_PROFILE,
+	editProfile: (id) => {
+		if (id) {
+			return `users/${id}/edit`;
+		} else {
+			return EDIT_PROFILE;
+		}
+	},
 	changePassword: CHANGE_PASSWORD,
 	videos: VIDEOS,
 	upload: UPLOAD,
@@ -43,7 +49,13 @@ const routes = {
 			return VIDEO_DETAIL;
 		}
 	},
-	editVideo: EDIT_VIDEO,
+	editVideo: (id) => {
+		if (id) {
+			return `videos/${id}/edit`;
+		} else {
+			return EDIT_VIDEO;
+		}
+	},
 	deleteVideo: DELETE_VIDEO
 };
 
