@@ -19,3 +19,8 @@ C - function that looks for the data
 - [ ] Upload Video
 - [ ] Video Detail
 - [ ] Edit Video
+
+mongo db 사용법
+use we-tube
+db.users.find({})
+db.users.remove({})
